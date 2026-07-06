@@ -67,7 +67,7 @@ text-align:center;
 # =====================================
 
 df = pd.read_csv("wondr_bni_reviews.csv")
-
+df["clean_review"] = df["review"]
 df.columns = df.columns.str.strip()
 
 df["review"] = df["review"].fillna("").astype(str)
